@@ -1,0 +1,133 @@
+.task-item {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.task-title-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-title {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #667eea;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 2px solid #667eea;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: white;
+  font-weight: 500;
+}
+
+.task-description {
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.task-description p {
+  margin: 0;
+}
+
+.task-edit-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 5px;
+  font-family: inherit;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.task-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #888;
+  flex-wrap: wrap;
+}
+
+.due-date {
+  font-weight: 500;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-buttons button {
+  flex: 1;
+  min-width: 100px;
+}
+
+@media (max-width: 480px) {
+  .task-buttons {
+    flex-direction: column;
+  }
+
+  .task-buttons button {
+    width: 100%;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    width: 100%;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+}
